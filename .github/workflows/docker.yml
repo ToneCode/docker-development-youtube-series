@@ -25,7 +25,7 @@ jobs:
         docker build ./nodejs -t tonecode/nodejs:1.0.0
     - name: docker build python
       run: |
-        docker build ./python -t tonecode/python:1.0.0
+        docker build ./python -t tonecode/python:2.0.0
     - name: docker build golang
       run: |
         docker build ./golang -t tonecode/golang:1.0.0

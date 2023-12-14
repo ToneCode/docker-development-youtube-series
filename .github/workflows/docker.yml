@@ -19,7 +19,7 @@ jobs:
         sudo docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: docker build csharp
       run: |
-        docker build ./c# -t tonecode/csharp:1.0.0
+       # docker build ./c# -t tonecode/csharp:1.0.0
     - name: docker build nodejs
       run: |
         docker build ./nodejs -t tonecode/nodejs:1.0.0
@@ -31,7 +31,7 @@ jobs:
         docker build ./golang -t tonecode/golang:1.0.0
     - name: docker push
       run: |
-        docker push tonecode/csharp:1.0.0
+       # docker push tonecode/csharp:1.0.0
         docker push tonecode/nodejs:1.0.0
         docker push tonecode/golang:1.0.0
         docker push tonecode/python:1.0.0

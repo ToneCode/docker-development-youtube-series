@@ -4,8 +4,9 @@ RUN mkdir /work/
 WORKDIR /work/
 
 COPY ./src/requirements.txt /work/requirements.txt
-RUN pip install --upgrade pip &&
-RUN pip install --no-deps -r requirements.txt
+RUN python -m pip install --upgrade pip &&\
+    python -m pip install --upgrade setuptools &&\
+    pip install -r requirements.txt 
 
 COPY ./src/ /work/
 ENV FLASK_APP=server.py

@@ -4,6 +4,7 @@ RUN mkdir /work/
 WORKDIR /work/
 
 COPY ./src/requirements.txt /work/requirements.txt
+RUN pip install --upgrade pip &&
 RUN pip install --no-deps -r requirements.txt
 
 COPY ./src/ /work/
